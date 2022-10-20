@@ -82,9 +82,9 @@ insert into pede(quantidade, valor_unitario, data_pedido,id_produto,id_fornecedo
 -- 11)Exclua um produto, ilustre o comando e explique a restrição de integridade.
 
 delete from produtos
-where id = 101;
+where id = 2;
 
--- O SGBD verifica se o valor que será deletado  está sendo usado em outra linha da tabela produtos, se estiver sendo usado, o ID não poderá ser deletado.
+-- O SGBD verifica se o valor que será deletado está sendo usado em outra linha da tabela produtos, se estiver sendo usado, o ID não poderá ser deletado.
 
 -- 12) Atualize a chave primária de um produto, ilustre o comando e explique a restrição de integridade.
 UPDATE produtos
