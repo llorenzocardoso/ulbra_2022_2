@@ -6,7 +6,7 @@ if (!isset($_GET['controller'])) {
   $MainController = new MainController();
   $MainController->index();
 } else {
-  switch ($_REQUEST['controller']) {
+  switch ($_REQUEST['controller']){
     case 'main':
       require_once('controllers/MainController.php');
       $MainController = new MainController();
@@ -16,13 +16,13 @@ if (!isset($_GET['controller'])) {
         switch ($_REQUEST['action']) {
           case 'login':
             $MainController->login();
-            break;
+          break;
           case 'logout':
             $MainController->logout();
-            break;
+          break;
         }
       }
-      break;
+    break;
 
     case 'user':
       require_once('controllers/UserController.php');
@@ -34,53 +34,52 @@ if (!isset($_GET['controller'])) {
             $UserController->validateLogin();
         }
       }
-      break;
+    break;
 
     case 'client':
       require_once('controllers/ClientController.php');
       $client = new ClientController();
-      if (!isset($_GET['action'])) {
-        $client->index();
-      } else {
-        switch ($_REQUEST['action']) {
-          case 'register':
-            $client->register();
-            break;
-          case 'registerView':
-            $client->registerView();
-            break;
+      if(!isset($_GET['action'])){
+          $client -> index();
+      }else{
+        switch($_REQUEST['action']){
           case 'listClients':
-            $client->listClients();
-            break;
+            $client -> listClients();
+          break;
           case 'detailsClient':
-            require_once('controllers/ClientController.php');
-            $ClientController = new ClientController();
-            $ClientController->detailsClient($_GET['id']);
-            break;
+            $client -> detailsClient($_GET['id']);
+          break;
           case 'insertClient':
-            $client->insertClient();
+            $client -> insertClient();
           break;
           case 'insertClientAction':
-            $client->insertClientAction();
+            $client -> insertClientAction();
           break;
           case 'updateClient':
-            $client-> updateClient($_GET['id']);
+            $client -> updateClient($_GET['id']);
+          break;
+          case 'updateClientAction':
+            $client -> updateClientAction($_GET['id']);
+          break;
+          case 'deleteClient':
+            $client -> deleteClient($_GET['id']);
           break;
         }
       }
-      break;
+    break;
+
     case 'site':
       require_once('controllers/SiteController.php');
       $SiteController = new SiteController();
-      if (!isset($_GET['action'])) {
-        $SiteController->home();
-      } else {
+      if(!isset($_GET['action'])){
+        $SiteController -> home();
+      }else{
         switch ($_REQUEST['action']) {
           case 'home':
-            $SiteController->home();
-            break;
+            $SiteController -> home();
+          break;
         }
       }
-      break;
+    break; 
   }
 }
