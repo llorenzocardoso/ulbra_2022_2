@@ -1,3 +1,4 @@
+package exercicio_3;
 public class Retangulo extends AreaCalculavel{
     double base;
     double altura;
@@ -5,7 +6,7 @@ public class Retangulo extends AreaCalculavel{
     public Retangulo(double base, double altura){
         super();
         this.setBase(base);
-        this.setHeight(altura);
+        this.setAltura(altura);
     }
 
     public double getBase(){
@@ -16,15 +17,15 @@ public class Retangulo extends AreaCalculavel{
         this.base = base;
     }
 
-    public double getHeight(){
+    public double getAltura(){
         return altura;
     }
 
-    public void setHeight(double altura){
+    public void setAltura(double altura){
         this.altura = altura;
     }
 
     public double calcularArea(){
-        return ((this.getBase() * this.getHeight()));
+        return ((this.getBase()*this.getAltura()));
     }
 }

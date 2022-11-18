@@ -1,8 +1,9 @@
+package exercicio_3;
 public class Main {
     
     public static void main(String[] args) {
-        Quadrado q = new Quadrado(2);
-        Circunferencia c = new Circunferencia(3);
+        Quadrado q = new Quadrado(4);
+        Circunferencia c = new Circunferencia(4);
         Retangulo r = new Retangulo(4, 2);
 
         System.out.println("Quadrado: " + q.calcularArea());

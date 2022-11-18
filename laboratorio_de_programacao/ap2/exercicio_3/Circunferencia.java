@@ -1,4 +1,6 @@
-public class Circunferencia extends AreaCalculavel{
+package exercicio_3;
+public class Circunferencia extends AreaCalculavel {
+    
     double raio;
     double pi = 3.14;
 
@@ -16,6 +18,6 @@ public class Circunferencia extends AreaCalculavel{
     }
 
     public double calcularArea(){
-       return pi * Math.pow(this.getRaio(),2);
+        return pi * Math.pow(this.getRaio(),2);
     }
 }

@@ -1,4 +1,5 @@
-public class Quadrado extends AreaCalculavel {
+package exercicio_3;
+public class Quadrado extends AreaCalculavel{
     double lado;
 
     public Quadrado(double lado){
@@ -13,8 +14,8 @@ public class Quadrado extends AreaCalculavel {
     public void setSide(double lado){
         this.lado = lado;
     }
+
     public double calcularArea(){
         return Math.pow(this.getSide(),2);
     }
-    
 }
